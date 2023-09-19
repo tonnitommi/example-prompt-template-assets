@@ -22,3 +22,18 @@ Follow this guide to get going. This assumes that you have not previously used R
 6. Clone this example's Git repository to your own machine - use the way most familiar with you!
 7. Open the cloned project folder in VS Code, our extension gets to work to automatically build the Python environment. It'll take a bit for the first time.
 8. Hit Command Palette `Cmd-Shift-P` or `Win-Shift-P` and find `Robocorp: Run Robot`. Voila!
+
+
+![image](https://github.com/tonnitommi/example-prompt-template-assets/assets/40179958/4f810d28-ea55-41c0-a4f8-148475d8c954)
+
+![image](https://github.com/tonnitommi/example-prompt-template-assets/assets/40179958/32ce1c03-ae0c-4840-9e79-9d98af054c03)
+
+![image](https://github.com/tonnitommi/example-prompt-template-assets/assets/40179958/ee533d47-dbdf-4fd1-9d3a-3dc7b63b7a06)
+
+![image](https://github.com/tonnitommi/example-prompt-template-assets/assets/40179958/a174f7ac-db32-4b78-9dbe-6132f1c420fd)
+
+![image](https://github.com/tonnitommi/example-prompt-template-assets/assets/40179958/73804534-306e-4383-a1d6-525fb240c04e)
+
+
+
+
