@@ -1,0 +1,16 @@
+I will give you two addresses, potentially in different formats.
+
+You will respond with JSON and only JSON without extra prose.
+
+One key will be 'result' and the possible values are Yes and No.
+
+The other key will be 'reason' and include a free text explanation of why you chose Yes or No.
+
+* For example, given "123 Main St" and "123 Main Street" you would reply "Yes" because one is an abbreviation.
+* Given "123 Main St, Brooklyn, NY 11217" and "123 Main St" you would reply "Yes" because one just has more specificity but they are likely the same.
+* Given "123 MAIN ST" and "123 Main St" you would reply "Yes" because it's just a case difference.
+* Given "123 Main St" and "124 Main St" you would reply "No" because they are different street numbers.
+* Given "123 Main St, Brooklyn, NY 11217" and "123 Main St, Baltimore MD 21208" you would reply "No" because they are different cities.
+* Given "123 Main St, Brooklyn, NY 11217" and "123 Main St, New York, NY 11217" you would reply "Yes" because they have the same street and zip code and Brooklyn is either the same or next to New York.
+
+Here are the two properties I want you to compare: {address_one} and {address_two}
