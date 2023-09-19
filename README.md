@@ -1,22 +1,24 @@
-# Template: Python - Minimal
+# Langchain Prompt Templates from Robocorp Asset Storage
 
-This template leverages the new Python open-source structure [robo](https://github.com/robocorp/robo), the [libraries](https://github.com/robocorp/robo#libraries) from to same project as well.
-The full power of [rpaframework](https://github.com/robocorp/rpaframework) is also available for you on Python as a backup while we implement new Python libraries.
+Prompt Templates is a neat way of managing the prompts that go to large-language models, but keeping the templates in the code often means you'll need to redeploy your project for changes to take effect. Also, you might want different people to work on the prompt templates than actual code.
 
-The template provides you with the basic structure of a Python project: logging out of the box and controlling your tasks without fiddling with the base Python stuff. The environment contains the most used libraries, so you do not have to start thinking about those right away. 
+**SOLUTION: Let's put the prompt templates to Robocorp Asset Storage!**
 
-👉 After running the bot, check out the `log.html` under the `output` -folder.
+Apart from being able to iterate the prompt templates fast, using Robocorp for developing and running Langchain workloads, you'll get several benefits.
 
-The template here is essentially empty, leaving you with a canvas to paint on.
+- Curated collection of Python libraries built for automating typical sources of data for e.g. RAG data loaders (websites with Playwright, desktops legacy apps, any cloud platform, documents with OCR, excel and much more).
+- Amazing environment control - define dependencies once, and tooling takes care of environment builds and a whole lot more when developing and running workflows.
+- Run anywhere - Robocorp offers zero-infra workers in the cloud, or you can self-host on-demand containers, Windows VMs or dedicated machines on any (common) OS. Why this matters: your RAG data loaders can work where your data and apps are.
 
-Do note that with Robocorp tooling you:
-- Do NOT need Python installed
-- Should NOT be writing `pip install..`; the [conda.yaml](https://github.com/robocorp/template-python/blob/master/conda.yaml) is here for a reason.
-- You do not need to worry about Python's main -functions and, most importantly, the logging setup
+## Step-by-step
 
-🚀 Now, go get'em
+Follow this guide to get going. This assumes that you have not previously used Robocorp.
 
-For more information, do not forget to check out the following:
-* [Robocorp Documentation -site](https://robocorp.com/docs)
-* [Portal for more examples](https://robocorp.com/portal)
-* [robo repo](https://github.com/robocorp/robo) as this will developed a lot...
+1. Install [VS Code](https://code.visualstudio.com/) (well, I bet you might have that already;)
+2. Install [Robocorp Code extension](https://marketplace.visualstudio.com/items?itemName=robocorp.robocorp-code) - this one connects your dev environment with the Robocorp Control Room
+3. Create a [Robocorp Control Room](https://cloud.robocorp.com) account - free accounts available, no credit card needed!
+4. In Control Room, create a Vault entry for OpenAI API credentials. Use the name `OpenAI` and `api-key` unless you want to edit the code.
+5. In Control Room, create an Asset for the prompt template. Use the name `example_prompt_template` unless you want to edit the code. The text is fully shown [here](prompt_template.txt) for easy copy pasting.
+6. Clone this example's Git repository to your own machine - use the way most familiar with you!
+7. Open the cloned project folder in VS Code, our extension gets to work to automatically build the Python environment. It'll take a bit for the first time.
+8. Hit Command Palette `Cmd-Shift-P` or `Win-Shift-P` and find `Robocorp: Run Robot`. Voila!

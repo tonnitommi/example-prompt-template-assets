@@ -10,6 +10,6 @@ dependencies:
   - pip=22.1.2                    # https://pip.pypa.io/en/stable/news
   - pip:
     - robocorp==1.0.0             # https://pypi.org/project/robocorp
-    - robocorp-excel==0.4.0     # https://pypi.org/project/robocorp-browser
+    - robocorp-excel==0.4.0       # https://pypi.org/project/robocorp-browser
     - openai==0.28.0
     - langchain==0.0.288
