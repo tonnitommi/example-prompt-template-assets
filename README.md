@@ -2,7 +2,7 @@
 
 Prompt Templates is a neat way of managing the prompts that go to large-language models, but keeping the templates in the code often means you'll need to redeploy your project for changes to take effect. Also, you might want different people to work on the prompt templates than actual code.
 
-💡**SOLUTION: Let's put the prompt templates to Robocorp Asset Storage!**💡
+💡 **SOLUTION: Let's put the prompt templates to Robocorp Asset Storage!** 💡
 
 Apart from being able to iterate the prompt templates fast, using Robocorp for developing and running Langchain workloads, you'll get several benefits.
 
