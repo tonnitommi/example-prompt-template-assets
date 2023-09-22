@@ -10,6 +10,10 @@ Apart from being able to iterate the prompt templates fast, using Robocorp for d
 - Amazing environment control - define dependencies once, and tooling takes care of environment builds and a whole lot more when developing and running workflows.
 - Run anywhere - Robocorp offers zero-infra workers in the cloud, or you can self-host on-demand containers, Windows VMs or dedicated machines on any (common) OS. Why this matters: your RAG data loaders can work where your data and apps are.
 
+## Use case
+
+The example code uses LLM to compare if two addresses are the same as introduced in [Benjamin Stein's blog post](https://www.haihai.ai/programming-with-llm/). So if we give LLM address pair like `1540 Battery St. CA` and `1540 Battery Street, San Francisco` the answer should be YES.
+
 ## Step-by-step
 
 Follow this guide to get going. This assumes that you have not previously used Robocorp, so we go through everything step-by-step.
