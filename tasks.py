@@ -18,7 +18,7 @@ def compare_addresses():
 
     # Set up LLM using credentials from Robocorp Vault - edit to match your own entries
     openai_credentials = vault.get_secret("OpenAI")
-    llm = ChatOpenAI(openai_api_key=openai_credentials["key"])
+    llm = ChatOpenAI(openai_api_key=openai_credentials["api-key"])
 
     # Create the prompt template using Robocorp Asset Storage, easy to edit the prompt in the cloud
     # without deploying code changes. Edit the name of the Asset to match your own.
