@@ -38,7 +38,11 @@ Follow this guide to get going. This assumes that you have not previously used R
 
 7️⃣ Open the cloned project folder in VS Code, our extension gets to work to automatically build the Python environment. It'll take a few minutes for the first time.
 
-8️⃣ Hit Command Palette `Cmd-Shift-P` or `Win-Shift-P` and find `Robocorp: Run Robot`. Voila!
+8️⃣ Link the VS Code with your Control Room account and Workspace from the bottom left corner of the extension.
+
+<img width="1389" alt="Screenshot 2023-09-22 at 7 56 21" src="https://github.com/tonnitommi/example-prompt-template-assets/assets/40179958/b9486a49-4d90-497a-9514-517fe62f663f">
+
+9️⃣ Hit Command Palette `Cmd-Shift-P` or `Win-Shift-P` and find `Robocorp: Run Robot`. Voila!
 
 <img width="1389" alt="Screenshot 2023-09-19 at 13 56 54" src="https://github.com/tonnitommi/example-prompt-template-assets/assets/40179958/185caa66-885e-4d3d-a956-bd1c154683ae">
 
