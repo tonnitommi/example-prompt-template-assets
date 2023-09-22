@@ -42,14 +42,42 @@ Follow this guide to get going. This assumes that you have not previously used R
 
 <img width="1389" alt="Screenshot 2023-09-19 at 13 56 54" src="https://github.com/tonnitommi/example-prompt-template-assets/assets/40179958/185caa66-885e-4d3d-a956-bd1c154683ae">
 
+## The bot code explained
 
+This chapter walks through some of the key features of the code, which is already simple and documented to start with.
 
+```python
+addresses = excel.open_workbook("addresses.xlsx").worksheet("Sheet1").as_list(header=True)
+```
 
+This line does a few things all in one, using Robocorp's built in [Excel automation library](https://github.com/robocorp/robo/tree/master/excel). It opens the workbook, given sheet and reads the data as a list with data containing the headers.
 
+```python
+openai_credentials = vault.get_secret("OpenAI")
+llm = ChatOpenAI(openai_api_key=openai_credentials["key"])
+```
 
+The example uses Robobocorp's secure Vault from [Control Room](https://cloud.robocorp.com) to store credentials. The secret does not need to be exposed to the developers, yet they are available both when developing and when executing workflows in cloud runtimes.
 
+```python
+template = ChatPromptTemplate.from_messages(
+    [
+        SystemMessage(content=("You are a helpful assistant that compares addresses for the user.")),
+        HumanMessagePromptTemplate.from_template(storage.get_text("example_prompt_template")),
+    ]
+)
+```
 
+When creating the Chat Prompt Template, the human message template is read from Asset Storage. It gets the latest version every time the code is run, and editing and develepoing the prompt is isolated away from the code.
 
+```python
+response = llm(template.format_messages(address_one=row["First address"], address_two=row["Second address"]))
+```
 
+When prompting the LLM, the template is simply injected with the required variables coming from the list we got from the excel. In this case the variables are `address_one` and `address_two`, which are shown as `{address_one}` and `{address_two}` in the template.
 
+## What next
 
+- Check [Robocorp Portal](https://robocorp.com/portal/collection/data-and-ai) for more Generative AI examples
+- Explore the [automation capabilities](https://robocorp.com/docs/libraries) or Robocorp platform
+- Build your own scalable python workflows!

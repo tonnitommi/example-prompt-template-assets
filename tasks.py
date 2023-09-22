@@ -29,8 +29,6 @@ def compare_addresses():
         ]
     )
 
-    print(storage.get_text("example_prompt_template"))
-
     for row in addresses:
         print(f"\nComparing addresses: {row['First address']} to {row['Second address']}.")
 
