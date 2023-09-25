@@ -101,5 +101,5 @@ When prompting the LLM, the template is simply injected with the required variab
 ## What next
 
 - Check [Robocorp Portal](https://robocorp.com/portal/collection/data-and-ai) for more Generative AI examples
-- Explore the [automation capabilities](https://robocorp.com/docs/libraries) or Robocorp platform
-- Build your own scalable python workflows!
+- Explore the [automation capabilities](https://robocorp.com/docs/libraries) on Robocorp platform
+- Take the first [Robocorp automation developer certification course](https://robocorp.com/docs/courses/beginners-course-python) for free!
