@@ -55,6 +55,20 @@ Follow this guide to get going. This assumes that you have not previously used R
 This chapter walks through some of the key features of the code, which is already simple and documented to start with.
 
 ```python
+from robocorp.tasks import task
+from robocorp import vault, storage, excel
+```
+
+Apart from importing the relevant LangChain "things", we are using Robocorp's Python Framework and automation toolkit that makes it easy to use capabilities from the Control Room, as well as interact with popular tools like Excel. Learn more about the framework [here](https://robocorp.com/docs/python/framework-intro).
+
+```python
+@task
+def compare_addresses():
+```
+
+To create runnable portions for a Python project, use a `@task` decorator. It tells the library that the function implements one specific automation task (here called `compare_addresses`), which can then later be scheduled to run in Control Room. In addition, the decorator automatically initializes logging from `robocorp-log`.
+
+```python
 addresses = excel.open_workbook("addresses.xlsx").worksheet("Sheet1").as_list(header=True)
 ```
 
